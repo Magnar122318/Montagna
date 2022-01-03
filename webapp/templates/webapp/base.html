@@ -4,29 +4,31 @@
 
   {% load static %}
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap Fusion +-->
     <link href="{% static 'webapp/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="{%static 'webapp/img/logo4.png'%}" />
+    <link rel="icon" type="image/png" href="{%static 'webapp/img/logo_M.png'%}" />
     <title>Montagna</title>
      <!-- Fonts -->
      <script src="https://kit.fontawesome.com/e789137e8a.js" crossorigin="anonymous"></script>
      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
      <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caladea&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{% static 'webapp/css/prueba9.css' %}" rel="stylesheet">
+    <link href="{% static 'webapp/css/prueba12.css' %}" rel="stylesheet">
 </head>
 
 <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       
-        <span class="site-heading-lower" >MONTAGNA</span>
+        <span class="site-heading-lower" style="color: #9B9B9B;">MONTAGNA</span>
       </h1>
 
 
@@ -38,136 +40,145 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse"  id="navbarResponsive">
+        
         <ul class="navbar-nav mx-auto">
           <li class="nav-item {% if request.path == '/' %} active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}" Style= "font-family: 'Roboto Slab';">Inicio</a>
+            <a class="nav-link text-uppercase text-expanded" style="font-size:25px;" href="{% url 'Home' %}" >Inicio</a>
           </li>
-          <li class="nav-item {% if request.path == '/servicios/' %} active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}" Style= "font-family: 'Roboto Slab';">Planes</a>
+          <li class="nav-item {% if request.path == '/nosotros/' %} active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" style="font-size:25px;" href="{% url 'nosotros' %}" >Nosotros</a>
           </li>
           <li class="nav-item dropdown {% if request.path == '/brochure/' %} active{% endif %} px-lg-4">
             <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <a class="nav-link dropdown" href="{% url 'brochure' %}" >Brochure</a>
+            <a class="nav-link dropdown" href="{% url 'brochure' %}"style="font-size:25px;" >SERVICIOS</a>
                 <span class="fa-stack fa-sm">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
                 </span>
               </button>
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <ul>
-                  <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                    <a class="nav-link dropdown" href="{% url 'administracion' %}" >Administracion</a>
-                      
-                      </button>
-                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                        <ul>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'planes' %}" Style= "font-family: 'Roboto Slab';">Planillas</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'firma_electronica' %}" Style= "font-family: 'Roboto Slab';">Firma electronica</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Evaluacion' %}" Style= "font-family: 'Roboto Slab';">Evaluación y Desempeño</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Climaorganizacional' %}" Style= "font-family: 'Roboto Slab';">Selección y Capacitacion</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'SeleccionyCapacitacion' %}" Style= "font-family: 'Roboto Slab';">Clima organizacional</a></li>
-                        </ul>
-                      
-                    </div></li>
-                  <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                    <a class="nav-link dropdown" href="{% url 'finanzas' %}" >Finanzas</a>
-                       
-                      </button>
-                    <div id="collapse3" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                        <ul>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'facturacion' %}" Style= "font-family: 'Roboto Slab';">Facturacion</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Cuenta_a_pagar' %}" Style= "font-family: 'Roboto Slab';">Cuenta a pagar</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Cuentas_por_cobrar' %}" Style= "font-family: 'Roboto Slab';">Cuentas por cobrar</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Reportes_faltante' %}" Style= "font-family: 'Roboto Slab';">Reortes faltantes</a></li>
-                          
-                        </ul>
-                      
-                    </div></li>
-                  <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                    <a class="nav-link dropdown" href="{% url 'logistica' %}" >Logistica</a>
-                        
-                      </button>
-                    <div id="collapse4" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                        <ul>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Solicitudes_por_pedido' %}" Style= "font-family: 'Roboto Slab';">Solicitudes por pedido</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Inventarios' %}" Style= "font-family: 'Roboto Slab';">Inventarios</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Bodegas' %}" Style= "font-family: 'Roboto Slab';">Bodegas</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Repuestos' %}" Style= "font-family: 'Roboto Slab';">Respuetos, insumos</a></li>
-                          
-                        </ul>
-                      
-                    </div></li>
-                  <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                    <a class="nav-link dropdown" >Comercial</a>
-                        
-                      </button>
-                    <div id="collapse5" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                        <ul>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Cotizaciones' %}" Style= "font-family: 'Roboto Slab';">Cotizaciones</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'CMR' %}" Style= "font-family: 'Roboto Slab';">Gestion de clientes (CMR)</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'prospección_de_Clientes' %}" Style= "font-family: 'Roboto Slab';">Prospección de Clientes</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Fidelizacion_y_Post_Venta' %}" Style= "font-family: 'Roboto Slab';">Fidelizacion y Post Venta</a></li>
-                          
-                        </ul>
-                      
-                    </div></li>
-                  <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                    <a class="nav-link dropdown" href="{% url 'proyectos' %}">Proyectos</a>
-                        
-                      </button>
-                    <div id="collapse6" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                        <ul>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Planificación_de_poryectos' %}" Style= "font-family: 'Roboto Slab';">Planificación de poryectos</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Control_de_tiempos_y_costos' %}" Style= "font-family: 'Roboto Slab';">Control de tiempos y costos</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Gestion_de_valor_ganado' %}" Style= "font-family: 'Roboto Slab';">Gestion de valor ganado</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Tareas_de_personal' %}" Style= "font-family: 'Roboto Slab';">Tareas de personal</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Control_documentario' %}" Style= "font-family: 'Roboto Slab';">Control documentario</a></li>
-                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Gestion_de_riesgo' %}" Style= "font-family: 'Roboto Slab';">Gestion de riesgo</a></li>
-                        </ul>
-                      
-                    </div></li>
-                    <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                      <a class="nav-link dropdown" href="{% url 'seguridad' %}" >Seguridad</a>
-                         
-                        </button>
-                      <div id="collapse7" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                
+              <ul>
+                <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  <a class="nav-link dropdown" href="#" >DESARROLLO DE PLATAFORMAS</a>
+                    
+                    </button>
+                  <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                      <ul>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >Administracion</a>
+                          <div id="collapse3" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
                           <ul>
-                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Habilitacion_de_personal' %}" Style= "font-family: 'Roboto Slab';">Habilitacion de personal</a></li>
-                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Inspecciones' %}" Style= "font-family: 'Roboto Slab';">Inspecciones</a></li>
-                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Procedimientos' %}" Style= "font-family: 'Roboto Slab';">Procedimientos</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'planes' %}" >Planillas</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'firma_electronica' %}" >Firma electronica</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Evaluacion' %}" >Evaluación y Desempeño</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Climaorganizacional' %}" >Selección y Capacitacion</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'SeleccionyCapacitacion' %}" >Clima organizacional</a></li>
                           </ul>
-                        
-                      </div></li>
-                      <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                        <a class="nav-link dropdown" class="nav-link dropdown" href="{% url 'ActivosyMantenimientos' %}" >Activos y Mantenimientos</a>
-                            
-                          </button>
-                        <div id="collapse8" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                            <ul>
-                              <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Registro_y_jerarquia' %}" Style= "font-family: 'Roboto Slab';">Registro y jerarquia</a></li>
-                              <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Planes_de_mantenimioentos' %}" Style= "font-family: 'Roboto Slab';">Planes de mantenimioentos</a></li>
-                              <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Plan_de_reemplazo' %}" Style= "font-family: 'Roboto Slab';">Plan de reemplazo</a></li>
-                              <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Ordenes_de_trabajo' %}" Style= "font-family: 'Roboto Slab';">Ordenes de trabajo</a></li>
-                              <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Avisos_de_Mantenimiento' %}" Style= "font-family: 'Roboto Slab';">Avisos de Mantenimiento</a></li>
-                              <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Análisis_de_fallos' %}" Style= "font-family: 'Roboto Slab';">Análisis de fallos</a></li>
-                            </ul>
                           
                         </div></li>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >Finanzas</a></a>
+                          <div id="collapse4" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                          <ul>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'facturacion' %}" >Facturacion</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Cuenta_a_pagar' %}" >Cuenta a pagar</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Cuentas_por_cobrar' %}" >Cuentas por cobrar</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Reportes_faltante' %}" >Reortes faltantes</a></li>
+                         </ul>
+                          
+                        </div></li>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >Logistica</a></a>
+                          <div id="collapse5" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                          <ul>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Solicitudes_por_pedido' %}" >Solicitudes por pedido</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Inventarios' %}" >Inventarios</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Bodegas' %}" >Bodegas</a></li>
+                          <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Repuestos' %}" >Respuetos, insumos</a></li>
+                        </ul>
+                          
+                        </div></li>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >>Comercial</a></a></a>
+                          <div id="collapse6" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                          <ul>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Cotizaciones' %}" >Cotizaciones</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'CMR' %}" >Gestion de clientes (CMR)</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'prospección_de_Clientes' %}" >Prospección de Clientes</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Fidelizacion_y_Post_Venta' %}" >Fidelizacion y Post Venta</a></li>
+                            
+                          </ul>
+                          
+                        </div></li>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >>Proyectos</a></a></a>
+                          <div id="collapse7" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                          <ul>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Planificación_de_poryectos' %}" >Planificación de poryectos</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Control_de_tiempos_y_costos' %}" >Control de tiempos y costos</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Gestion_de_valor_ganado' %}" >Gestion de valor ganado</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Tareas_de_personal' %}" >Tareas de personal</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Control_documentario' %}" >Control documentario</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Gestion_de_riesgo' %}" >Gestion de riesgo</a></li>
+                          </ul>
+                          
+                        </div></li>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >Seguridad</a>
+                          <div id="collapse8" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                          <ul>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Habilitacion_de_personal' %}" >Habilitacion de personal</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Inspecciones' %}" >Inspecciones</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Procedimientos' %}" >Procedimientos</a></li>
+                          </ul>
+                          
+                        </div></li>
+                        <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9"> 
+                          <a class="nav-link text-uppercase text-expanded" href="#" >Activos y Mantenimientos</a>
+                          <div id="collapse9" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+                          <ul>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Registro_y_jerarquia' %}" >Registro y jerarquia</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Planes_de_mantenimioentos' %}" >Planes de mantenimioentos</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Plan_de_reemplazo' %}" >Plan de reemplazo</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Ordenes_de_trabajo' %}" >Ordenes de trabajo</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Avisos_de_Mantenimiento' %}" >Avisos de Mantenimiento</a></li>
+                            <li><a class="nav-link text-uppercase text-expanded" href="{% url 'Análisis_de_fallos' %}" >Análisis de fallos</a></li>
+                          </ul>
+                          
+                        </div></li>
+                      </ul>
+                    
+                  </div></li>
+                  <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                    <a class="nav-link dropdown" href="#" >CONSULTORIA</a>
+                      
+                      </button>
+                    </li>
+                    <li><button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                      <a class="nav-link dropdown" href="#" >ENTRENAMIENTOS</a>
+                        
+                        </button>
+                      </li>
+
                 </ul>
               
             </div>
           
           </li>
+          <li class="nav-item {% if request.path == '/servicios/' %} active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}" style="font-size:25px;">Planes</a>
+          </li>
           <li class="nav-item {% if request.path == '/contacto/' %} active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}" Style= "font-family: 'Roboto Slab';">Contacto</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}"style="font-size:25px;" >Contacto</a>
           </li>
-          <li class="nav-item {% if request.path == '/nosotros/' %} active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'nosotros' %}" Style= "font-family: 'Roboto Slab';">Nosotros</a>
-          </li>
+
           <li class="nav-item {% if request.path|slice:':6' == '/blog/ ' %} active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}" Style= "font-family: 'Roboto Slab';">Blog</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}"style="font-size:25px;" >Blog</a>
           </li>
-          
+          <li class="nav-item {% if request.path == '/demo/' %} active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'demo' %}"style="font-size:25px;" >Demo</a>
+          </li>
           
         </ul>
         
@@ -207,9 +218,16 @@
         	<a href="sample.html" class="link">Política de privacidad</a> ·
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="https://www.linkedin.com/company/montagna-services-and-consulting/?viewAsMember=truel" class="link">Linkedin</a>
-		</p>
+         
+        </p>
         <p class="m-0 mbt1">&copy; MONTAGNA</p>
+        <div>
+          <p align="right" style="color:snow;">Contactenos</p>
+        </div>
+        <p align="right"style="color:snow;">+51 959183817-987332094</p>
       </div>
+     
+
 	</footer>
 
     <!-- Bootstrap -->

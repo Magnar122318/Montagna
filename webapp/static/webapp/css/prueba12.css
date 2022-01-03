@@ -1,9 +1,10 @@
 body {
-    font-family: 'Nordic';
-    background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/fondo.png");
+    font-family: 'Caladea', serif;
+    background:  url("../img/fondo1.png");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    
   }
   
 h1,
@@ -12,7 +13,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Nordic';
+    font-family: 'Caladea', serif;
+    color: rgb(148, 147, 143);
 }
 
 p {
@@ -28,7 +30,7 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: 'Nordic';
+  font-family: 'Caladea', serif;
 }
 
 .site-heading .site-heading-upper {
@@ -91,7 +93,7 @@ p {
     left: 600;
     width: 60%;
     margin-top: 3rem;
-    background-color: rgba(243, 211, 66, 0.8);
+    background-color: rgba(243, 211, 66, 1);
     color: cornsilk;
     position: absolute;
   }
@@ -220,7 +222,7 @@ a.link:hover{
 }
 
 .section-content{
-  font-family: 'Braxton' !important;
+    font-family: 'sans-serif' !important;
   font-size: 16px !important;
   font-weight: 400 !important;
   line-height: 28px !important;
@@ -228,7 +230,7 @@ a.link:hover{
 
 ul.errorlist{
   padding-top: .75rem;
-  font-style: italic;
+  font-family: 'Caladea', serif;
   color: red;
 }
 
@@ -280,7 +282,7 @@ text-decoration: underline;
   }
    
   .myaccordion .card-header {
-    border-bottom-color: #EDEFF0;
+    border-bottom-color: #adabab;
     background: transparent;
   }
    
@@ -306,11 +308,11 @@ text-decoration: underline;
   
 #mainNav {
     background-color: rgba(160, 214, 124, 0.89);
-    font-family: 'Braxton';
+    font-family: 'Caladea', serif;
   }
   
   #mainNav .navbar-brand {
-    color: #ffffff;
+    color: #adabab;
   }
   
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -319,7 +321,7 @@ text-decoration: underline;
   }
   
   #mainNav .navbar-nav .nav-item.active .nav-link {
-    color: #ffffff;
+    color: #adabab;
     text-decoration: underline;
   }
   
@@ -332,77 +334,7 @@ text-decoration: underline;
       text-decoration: underline;
     }
     #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-      color: #ffffff;
+      color: #adabab;
       text-decoration: underline;
-    }
-  }
-  .navbar-expand {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint, $grid-breakpoints);
-      $infix: breakpoint-infix($next, $grid-breakpoints);
-  
-      // stylelint-disable-next-line scss/selector-no-union-class-name
-      &#{$infix} {
-        @include media-breakpoint-up($next) {
-          flex-wrap: nowrap;
-          justify-content: flex-start;
-  
-          .navbar-nav {
-            flex-direction: row;
-  
-            .dropdown-menu {
-              position: absolute;
-            }
-  
-            .nav-link {
-              padding-right: $navbar-nav-link-padding-x;
-              padding-left: $navbar-nav-link-padding-x;
-            }
-          }
-  
-          .navbar-nav-scroll {
-            overflow: visible;
-          }
-  
-          .navbar-collapse {
-            display: flex !important; // stylelint-disable-line declaration-no-important
-            flex-basis: auto;
-          }
-  
-          .navbar-toggler {
-            display: none;
-          }
-  
-          .offcanvas-header {
-            display: none;
-          }
-  
-          .offcanvas {
-            position: inherit;
-            bottom: 0;
-            z-index: 1000;
-            flex-grow: 1;
-            visibility: visible !important; // stylelint-disable-line declaration-no-important
-            background-color: transparent;
-            border-right: 0;
-            border-left: 0;
-            @include transition(none);
-            transform: none;
-          }
-          .offcanvas-top,
-          .offcanvas-bottom {
-            height: auto;
-            border-top: 0;
-            border-bottom: 0;
-          }
-  
-          .offcanvas-body {
-            display: flex;
-            flex-grow: 0;
-            padding: 0;
-            overflow-y: visible;
-          }
-        }
-      }
     }
   }

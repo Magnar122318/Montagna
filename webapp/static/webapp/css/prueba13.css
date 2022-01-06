@@ -1,5 +1,6 @@
 body {
-    font-family: 'Caladea', serif;
+    
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
     background:  url("../img/fondo1.png");
     background-attachment: fixed;
     background-position: center;
@@ -13,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Caladea', serif;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
     color: rgb(148, 147, 143);
 }
 
@@ -30,7 +31,7 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: 'Caladea', serif;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;   
 }
 
 .site-heading .site-heading-upper {
@@ -230,7 +231,7 @@ a.link:hover{
 
 ul.errorlist{
   padding-top: .75rem;
-  font-family: 'Caladea', serif;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;   
   color: red;
 }
 
@@ -308,7 +309,7 @@ text-decoration: underline;
   
 #mainNav {
     background-color: rgba(160, 214, 124, 0.89);
-    font-family: 'Caladea', serif;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
   }
   
   #mainNav .navbar-brand {
@@ -316,7 +317,7 @@ text-decoration: underline;
   }
   
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(219, 219, 219, 0.7);
+    color: rgb(255, 254, 254);
     font-weight: 800;
   }
   
@@ -330,7 +331,7 @@ text-decoration: underline;
       font-size: 0.9rem;
     }
     #mainNav .navbar-nav .nav-item .nav-link:hover {
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(243, 211, 66, 0.8);
       text-decoration: underline;
     }
     #mainNav .navbar-nav .nav-item.active .nav-link:hover {
